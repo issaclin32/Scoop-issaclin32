@@ -1,8 +1,6 @@
-# Generic scoop bucket
+# Issaclin32's scoop bucket
 
-❗❗🎉 Repository was converted into Template. See [blog](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/?utm_campaign=1559837005&utm_medium=social&utm_source=twitter&utm_content=1559837005) for more information. 🎉❗❗
-
-In this repository you will find everything you need to know about creating custom bucket with appveyor support.
+generated from https://github.com/Ash258/GenericBucket
 
 ## Files and helpers
 
@@ -57,44 +55,3 @@ If you need help how to use them just run `Get-Help .\bin\<BINARY>.ps1`.
 - `.gitattributes`
     - Simplifying line endings for git
     - No need to configure `auto.clrf` setting on each clone or new workspaces
-
-## How to use and adopt this bucket
-
-1. Click on `Use this template` to create new repository in your account with same files
-1. Give your bucket in new name inside github project settings
-1. Add proper description of repository
-    - Information about what type of manifests could be found here
-1. Add `scoop-bucket` tag for repository
-    - Your manifests will be automatically available at <https://scoop.netlify.com/apps/> and <https://scoop.netlify.com/buckets/>
-1. Enable appveyor CI/CD
-    1. Register / Login to [Appveyor](https://ci.appveyor.com/login)
-    1. Click `New Project`
-    1. From Left Panel choose your source control variant (Github)
-    1. From Right Panel choose repository with bucket and click `+ Add`
-    1. 🎉 Project created and ready to build 🎉
-    1. Get Badge URL
-        1. Open Appveyor Project settings
-        1. Navigate to Badges
-        1. Copy `Branch Sample markdown code` snippet for further usage
-            - Only master branch is better, since you can freely test in other branches and do not mystificate users.
-1. Clone project into some folder
-1. Open vscode with this clone
-1. Run `git remote add 'upstream' 'https://github.com/Ash258/GenericBucket.git'`
-    - This step will allow you to synchronize changes with this template repository
-    - If some changes are pushed into this repository and you want to reflect them into your bucket, you can simply do something like:
-        - `git fetch --all`
-        - `git checkout -B upstream-master -t upstream/master`
-        - Do changes
-        - `git merge master` or create PR in github
-1. Create proper README.md
-    1. Open `README.template.md`
-    1. Replace all `%%templatestring%%` with real and according values
-        1. Replace appveyor status badge with yours
-            - See: <https://www.appveyor.com/docs/status-badges/>
-    1. Override this README with completed `README.template.md`
-    1. Remove template `README.template.md`
-1. Repository tweaks
-    1. Open `.github\CODEOWNERS` and change `@Ash258` to your github username
-    1. Actions
-        1. Open each file in `.github\workflows` and change `youremail@email.com` with your email
-1. 🎉🎉 Everything set. You are ready to write and share manifests. 🎉🎉
