@@ -1,0 +1,47 @@
+{
+    "##": "Add admin right check when porting to official buckets.",
+    "homepage": "https://rarlab.com/",
+    "description": "Archive manager",
+    "version": "5.80",
+    "license": "Shareware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.rarlab.com/rar/winrar-x64-580tc.exe",
+            "hash": "d472fa79cb27d8d6d93af0a52690a206e2d001bbb395ef367cc433daa672ce89"
+        },
+        "32bit": {
+            "url": "https://www.rarlab.com/rar/wrar580tc.exe",
+            "hash": "37e4ed1c8b55092481cb258eeed311b69105e61dba796e3838160e8652a076d4"
+        }
+    },
+    "pre_install": "if (!(Test-Path \"$persist_dir\\rarreg.key\")) { New-Item \"$dir\\rarreg.key\" | Out-Null }",
+    "installer": {
+        "args": [
+            "/s",
+            "/d$dir"
+        ]
+    },
+    "uninstaller": {
+        "file": "Uninstall.exe",
+        "args": "/s"
+    },
+    "bin": [
+        "rar.exe",
+        "unrar.exe"
+    ],
+    "persist": "rarreg.key",
+    "checkver": {
+        "url": "https://www.rarlab.com/download.htm",
+        "regex": "(?sm)<b>Chinese Traditional.*?([\\d\\.]+)</td>"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.rarlab.com/rar/winrar-x64-$cleanVersiontc.exe"
+            },
+            "32bit": {
+                "url": "https://www.rarlab.com/rar/wrar$cleanVersiontc.exe"
+            }
+        }
+    }
+}
