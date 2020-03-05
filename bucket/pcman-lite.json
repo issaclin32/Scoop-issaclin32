@@ -1,0 +1,29 @@
+{
+    "##": "This package is not ported to the official buckets because ReadMe file written in English is not available.",
+    "homepage": "https://pcman.ptt.cc/",
+    "description": "Free, open-source telnet BBS client.",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/pcman-bbs/pcman-windows/blob/master/License.txt"
+    },
+    "suggest": {
+        "vcredist2019": "extras/vcredist2019"
+    },
+    "version": "9.5.0-beta2",
+    "bin": "PCMan\\PCMan.exe",
+    "shortcuts": [
+        [
+            "PCMan\\PCMan.exe",
+            "PCMan"
+        ]
+    ],
+    "url": "https://github.com/pcman-bbs/pcman-windows/releases/download/v9.5.0-beta2/PCMan.zip",
+    "hash": "f24bbeb2ae44d84187b367b70664fbd8b75bca02d26f9a27c698aee30d06c008",
+    "checkver": {
+        "url": "https://github.com/pcman-bbs/pcman-windows/releases",
+        "regex": "tree/v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/pcman-bbs/pcman-windows/releases/download/v$version/PCMan.zip"
+    }
+}
