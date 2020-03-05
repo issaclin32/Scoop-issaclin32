@@ -10,7 +10,7 @@
     "url": "https://desktop.line-scdn.net/win/new/LineInst.exe#/setup.exe",
     "installer": {
         "script": [
-            "Invoke-ExternalCommand \"$dir\\setup.exe\" -ArgumentList @('/S', 'installLang=default') -ContinueExitCodes @{1223 = 'Exit code is 1223. This does not affect the installation.'} -RunAs | Out-Null",
+            "Invoke-ExternalCommand \"$dir\\setup.exe\" -ArgumentList @('/S', 'installLang=default') -ContinueExitCodes @{1223 = 'Exit code is 1223 (the user cancelled the operation). This does not affect the installation.'} -RunAs | Out-Null",
             "Remove-Item \"$dir\\setup.exe\""
         ]
     },
