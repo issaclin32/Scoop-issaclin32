@@ -2,16 +2,16 @@
     "##": "Add admin right check when porting to official buckets.",
     "homepage": "https://rarlab.com/",
     "description": "Archive manager",
-    "version": "5.80",
+    "version": "5.90",
     "license": "Shareware",
     "architecture": {
         "64bit": {
-            "url": "https://www.rarlab.com/rar/winrar-x64-580tc.exe",
-            "hash": "d472fa79cb27d8d6d93af0a52690a206e2d001bbb395ef367cc433daa672ce89"
+            "url": "https://www.rarlab.com/rar/winrar-x64-590tc.exe",
+            "hash": "f1b131516c3e41a056970f90f5676b6007af71735e5b273b48f3deb04ffbd994"
         },
         "32bit": {
-            "url": "https://www.rarlab.com/rar/wrar580tc.exe",
-            "hash": "37e4ed1c8b55092481cb258eeed311b69105e61dba796e3838160e8652a076d4"
+            "url": "https://www.rarlab.com/rar/wrar590tc.exe",
+            "hash": "1f38a9db8c6fdc14f6c868c8e63dba0d35d407c4bd121ad327940c42e645bdfa"
         }
     },
     "pre_install": "if (!(Test-Path \"$persist_dir\\rarreg.key\")) { New-Item \"$dir\\rarreg.key\" | Out-Null }",
