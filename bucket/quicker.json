@@ -34,7 +34,7 @@
     ],
     "checkver": {
         "url": "https://getquicker.net/Download",
-        "regex": "(?sm)<h5>.*?<small.*?>.*?([\\d.]+).*?</small>"
+        "regex": "(?sm)<h5>.*?<small.*?>.*?</small>.*?<h5>.*?<small.*?>.*?([\\d.]+).*?</small>"
     },
     "autoupdate": {
         "architecture": {
