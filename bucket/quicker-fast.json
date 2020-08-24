@@ -34,15 +34,15 @@
     ],
     "checkver": {
         "url": "https://getquicker.net/Download",
-        "regex": "(?sm)<h5>.*?<small.*?>.*?</small>.*?<h5>.*?<small.*?>.*?([\\d.]+).*?</small>"
+        "regex": "(?sm)<h5>.*?<small.*?>.*?([\\d.]+).*?</small>"
     },
     "autoupdate": {
         "architecture": {
             "32bit": {
-                "url": "https://getquicker.net/download/item/win_x86#/quicker.msi"
+                "url": "https://getquicker.net/download/item/fast_x86#/quicker.msi"
             },
             "64bit": {
-                "url": "https://getquicker.net/download/item/win_x64#/quicker.msi"
+                "url": "https://getquicker.net/download/item/fast_x64#/quicker.msi"
             }
         }
     }
