@@ -1,0 +1,11 @@
+{
+    "##": "Reference: https://blog.star2000.work/2019/02/18/Win10%E5%8D%B8%E8%BD%BD%E9%A2%84%E8%A3%85%E5%BA%94%E7%94%A8/",
+    "description": "Uninstall built-in Win10 Store Apps(such as Candy Crush)",
+    "version": "1.0",
+    "url": "https://www.google.com#/dummy",
+    "hash": "35f78fdaab7c1ba041890a7f5881d4605be404280580c4393419f4faf2f38c4a",
+    "notes": "You can now run 'scoop uninstall uninstall-win10-apps' to clean up the package.",
+    "installer": {
+        "script": "Get-AppPackage|?{ $_.Name -ne 'Microsoft.WindowsStore'}|Remove-AppPackage -ea Ignore"
+    }
+}
