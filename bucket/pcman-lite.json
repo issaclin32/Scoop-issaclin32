@@ -9,7 +9,7 @@
     "suggest": {
         "vcredist2019": "extras/vcredist2019"
     },
-    "version": "9.5.0-beta2",
+    "version": "9.5.0-beta3",
     "bin": "PCMan\\PCMan.exe",
     "shortcuts": [
         [
@@ -17,8 +17,8 @@
             "PCMan"
         ]
     ],
-    "url": "https://github.com/pcman-bbs/pcman-windows/releases/download/v9.5.0-beta2/PCMan.zip",
-    "hash": "f24bbeb2ae44d84187b367b70664fbd8b75bca02d26f9a27c698aee30d06c008",
+    "url": "https://github.com/pcman-bbs/pcman-windows/releases/download/v9.5.0-beta3/PCMan.zip",
+    "hash": "42dde7521f2f0cd7044087c997ca6084714722025bd9128e498372b92cfe7a71",
     "checkver": {
         "url": "https://github.com/pcman-bbs/pcman-windows/releases",
         "regex": "tree/v([\\w.-]+)"
