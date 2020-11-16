@@ -1,5 +1,5 @@
 {
-    "version": "7.3.24-0",
+    "version": "7.4.12-0",
     "description": "Apache distribution containing MariaDB, PHP, and Perl",
     "homepage": "https://www.apachefriends.org/index.html",
     "license": "GPL-2.0-only",
@@ -9,8 +9,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://downloads.sourceforge.net/project/xampp/XAMPP%20Windows/7.3.24/xampp-portable-windows-x64-7.3.24-0-VC15.7z",
-            "hash": "sha1:5e23593638eef0e8588bd6dcbbeda9d43c6fcf4f"
+            "url": "https://downloads.sourceforge.net/project/xampp/XAMPP%20Windows/7.4.12/xampp-portable-windows-x64-7.4.12-0-VC15.7z",
+            "hash": "sha1:8286b229d37aff5641ce2034c960c436cf1c9281"
         }
     },
     "extract_dir": "xampp",
