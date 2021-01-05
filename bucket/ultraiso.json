@@ -1,5 +1,5 @@
 {
-    "version": "9.7.3.3618",
+    "version": "9.7.5.3716",
     "description": "CD/DVD image file editing tool",
     "homepage": "https://www.ezbsystems.com/ultraiso/",
     "license": {
@@ -7,7 +7,7 @@
         "url": "https://www.ezbsystems.com/pad/ultraiso.xml"
     },
     "url": "http://www.ezbsystems.com/dl1.php?file=uiso9_pe.exe",
-    "hash": "c86c2f16b07a80af5bf022fb52195bd9bfe2a3a968684d44407643157924d2c4",
+    "hash": "06d88226d8345c0cf2671baf439d5245eede3f200d0db6adba473eb0d7671ede",
     "innosetup": true,
     "bin": "UltraISO.exe",
     "shortcuts": [
