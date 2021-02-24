@@ -1,0 +1,49 @@
+{
+    "homepage": "https://foldingathome.org/",
+    "version": "7.5.1",
+    "license": "Proprietary",
+    "description": "Client for the Folding@Home project, which aims to find cures for diseases by distributed computing",
+    "url": "https://download.foldingathome.org/releases/public/release/fah-installer/windows-10-32bit/v7.5/fah-installer_7.5.1_x86.exe#/dl.7z",
+    "hash": "e97aeccbf3692001dafe16612b1cae6a90cb6c22dbf57e947d9c13ff4e1b5715",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\log.txt\")) { New-Item \"$dir\\log.txt\" }",
+        "if (!(Test-Path \"$persist_dir\\GPUs.txt\")) { New-Item \"$dir\\GPUs.txt\" }",
+        "if (Test-Path \"$persist_dir\\FAHControl.db\") { Copy-Item \"$persist_dir\\FAHControl.db\" \"$dir\" }",
+        "Remove-Item \"$dir\\`$_17_\", \"$dir\\`$PLUGINSDIR\", \"$dir\\`$SYSDIR\", \"$dir\\Uninstall.exe.nsis\" -Force -Recurse"
+    ],
+    "uninstaller": {
+        "script": "if (Test-Path \"$dir\\FAHControl.db\") {Copy-Item \"$dir\\FAHControl.db\" \"$persist_dir\" -Force }"
+    },
+    "bin": [
+        "FAHClient.exe",
+        "FAHControl.exe",
+        "FAHViewer.exe"
+    ],
+    "shortcuts": [
+        [
+            "FAHClient.exe",
+            "Folding@Home client"
+        ],
+        [
+            "FAHControl.exe",
+            "Folding@Home Advanced Control"
+        ],
+        [
+            "FAHViewer.exe",
+            "Folding@Home Viewer"
+        ]
+    ],
+    "persist": [
+        "work",
+        "log.txt",
+        "GPUs.txt",
+        "FAHControl.db"
+    ],
+    "checkver": {
+        "url": "https://github.com/FoldingAtHome/fah-client-version/releases",
+        "regex": "fah-client-([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://download.foldingathome.org/releases/public/release/fah-installer/windows-10-32bit/v$majorVersion.$minorVersion/fah-installer_$version_x86.exe#/dl.7z"
+    }
+}
