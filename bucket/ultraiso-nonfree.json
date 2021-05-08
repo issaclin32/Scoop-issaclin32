@@ -1,6 +1,6 @@
 {
     "##": "Trial version (file size limited to 300MB). Can be unlocked using license key.",
-    "version": "9.7.5.3716",
+    "version": "9.7.6.3812",
     "description": "CD/DVD image file editing tool",
     "homepage": "https://www.ezbsystems.com/ultraiso/",
     "license": {
@@ -8,7 +8,7 @@
         "url": "https://www.ezbsystems.com/pad/ultraiso.xml"
     },
     "url": "http://www.ezbsystems.com/dl1.php?file=uiso9_pe.exe",
-    "hash": "06d88226d8345c0cf2671baf439d5245eede3f200d0db6adba473eb0d7671ede",
+    "hash": "a49e945e5f6482b42c0e59e8187cddd4d736fcda0526768ca58a4411016d3e19",
     "innosetup": true,
     "bin": "UltraISO.exe",
     "shortcuts": [
