@@ -1,0 +1,22 @@
+{
+    "homepage": "https://www.nvidia.com/en-us/geforce/geforce-experience/",
+    "version": "3.22.0.32",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.nvidia.com/en-us/about-nvidia/eula-agreement/"
+    },
+    "description": "Nvidia GeForce graphics card toolkit",
+    "url": "https://us.download.nvidia.com/GFE/GFEClient/3.22.0.32/GeForce_Experience_v3.22.0.32.exe#/setup.exe",
+    "hash": "2adce2709a4cab14ae7858439f59e3fe15f80fda21f0e2044bbe6bd991b48a72",
+    "pre_install": [
+        "Invoke-ExternalCommand \"$dir\\setup.exe\" -ArgumentList '/S' -RunAs | Out-Null",
+        "Remove-Item \"$dir\\setup.exe\" | Out-Null"
+    ],
+    "uninstaller": {
+        "script": "Invoke-ExternalCommand 'C:\\WINDOWS\\SysWOW64\\RunDll32.EXE' -ArgumentList @('C:\\Program Files\\NVIDIA Corporation\\Installer2\\InstallerCore\\NVI2.DLL','UninstallPackage Display.GFExperience', '/S') -RunAs | Out-Null"
+    },
+    "checkver": "GeForce_Experience_v([\\d.]+)\\.exe",
+    "autoupdate": {
+        "url": "https://us.download.nvidia.com/GFE/GFEClient/$version/GeForce_Experience_v$version.exe#/setup.exe"
+    }
+}
