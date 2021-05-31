@@ -1,4 +1,4 @@
-# Issaclin32's personal Scoop bucket
+# Issaclin32's Scoop bucket
 
 About
 Some useful packages for [Scoop installer](https://github.com/lukesampson/scoop).
