@@ -1,5 +1,6 @@
 # Issaclin32's personal Scoop bucket
 
-Add this bucket to Scoop by `scoop bucket add issaclin32 https://github.com/issaclin32/scoop-bucket`
+About
+Some useful packages for [Scoop installer](https://github.com/lukesampson/scoop).
 
-Helpers are generated from https://github.com/Ash258/GenericBucket
+Add this bucket to Scoop by `scoop bucket add issaclin32 https://github.com/issaclin32/scoop-bucket`
