@@ -1,6 +1,5 @@
 {
     "##": "The language code 'zh-tw' is written according to ISO 639-1. See Wikipedia for details.",
-    "##1": "Add admin right check when porting to official buckets.",
     "version": "6.01",
     "description": "Powerful archive manager (language: Chinese Traditional)",
     "homepage": "https://rarlab.com/",
@@ -8,28 +7,20 @@
         "identifier": "Shareware",
         "url": "https://www.win-rar.com/gtb_priv.html?&L=0"
     },
+    "notes": "Set up context menu within settings window.",
     "architecture": {
         "64bit": {
-            "url": "https://www.rarlab.com/rar/winrar-x64-601tc.exe#/setup.exe",
+            "url": "https://www.rarlab.com/rar/winrar-x64-601tc.exe#/dl.7z",
             "hash": "c30791bc0105bad8675acf1f4a3873d00525a361406fcdcd0faf49a15f0f87df"
         },
         "32bit": {
-            "url": "https://www.rarlab.com/rar/wrar601tc.exe#/setup.exe",
+            "url": "https://www.rarlab.com/rar/wrar601tc.exe#/dl.7z",
             "hash": "d3e0933454e59231518262ae51ce045d5307ee551f2a0067b3af3b14c6aea92e"
         }
     },
     "pre_install": "if (!(Test-Path \"$persist_dir\\rarreg.key\")) { New-Item \"$dir\\rarreg.key\" | Out-Null }",
-    "installer": {
-        "script": [
-            "Invoke-ExternalCommand \"$dir\\setup.exe\" -ArgumentList @('/s', \"/d$dir\") -RunAs | Out-Null",
-            "Remove-Item \"$dir\\setup.exe\""
-        ]
-    },
     "uninstaller": {
         "script": [
-            "Invoke-ExternalCommand \"$dir\\Uninstall.exe\" -ArgumentList @('/s') -RunAs | Out-Null",
-            "while (Get-Process -Name Uninstall -ErrorAction SilentlyContinue) {Start-Sleep -Milliseconds 200}",
-            "Start-Sleep -Seconds 2",
             "Stop-Process -Name explorer -Force",
             "Start-Process explorer"
         ]
@@ -54,10 +45,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://www.rarlab.com/rar/winrar-x64-$cleanVersiontc.exe#/setup.exe"
+                "url": "https://www.rarlab.com/rar/winrar-x64-$cleanVersiontc.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://www.rarlab.com/rar/wrar$cleanVersiontc.exe#/setup.exe"
+                "url": "https://www.rarlab.com/rar/wrar$cleanVersiontc.exe#/dl.7z"
             }
         }
     }
