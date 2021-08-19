@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe#/setup.exe",
-            "hash": "62c7acbfd59549d683bbe3c9370aa218550253edfc0f5674eb0611c7b7cdd562"
+            "hash": "165e807163471a4f3bb25eaa9febfa408a2f9110d9547ba67d7a7c2f784c9bec"
         }
     },
     "installer": {
