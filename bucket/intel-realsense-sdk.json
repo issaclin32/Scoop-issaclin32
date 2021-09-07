@@ -1,0 +1,24 @@
+{
+    "version": "2.49.0.3474",
+    "description": "SDK for Intel RealSense Depth Camera and Lidars",
+    "homepage": "https://www.intelrealsense.com/sdk-2/",
+    "license": "Apache-2.0",
+    "url": "https://github.com/IntelRealSense/librealsense/releases/download/v2.49.0/Intel.RealSense.SDK-WIN10-2.49.0.3474.exe#/setup.exe",
+    "hash": "a97b88269eaeea4ef94cc0a4a3b61d31c5e1118704f688ac9dbfd0e64ac3640b",
+    "installer": {
+        "script": [
+            "Invoke-ExternalCommand \"$dir\\setup.exe\" -ArgumentList @('/SILENT') -RunAs | Out-Null",
+            "Remove-Item \"$dir\\setup.exe\""
+        ]
+    },
+    "uninstaller": {
+        "script": "Invoke-ExternalCommand \"${env:ProgramFiles(x86)}\\Intel RealSense SDK 2.0\\unins000.exe\" -ArgumentList @('/SILENT') -RunAs | Out-Null"
+    },
+    "checkver": {
+        "url": "https://github.com/IntelRealSense/librealsense/releases",
+        "regex": "Intel\\.RealSense\\.SDK-WIN10-([\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://github.com/IntelRealSense/librealsense/releases/download/v$majorVersion.$minorVersion.$patchVersion/Intel.RealSense.SDK-WIN10-$version.exe#/setup.exe"
+    }
+}
