@@ -7,13 +7,40 @@
     "hash": "a97b88269eaeea4ef94cc0a4a3b61d31c5e1118704f688ac9dbfd0e64ac3640b",
     "installer": {
         "script": [
-            "Invoke-ExternalCommand \"$dir\\setup.exe\" -ArgumentList @('/SILENT') -RunAs | Out-Null",
+            "Invoke-ExternalCommand \"$dir\\setup.exe\" -ArgumentList @('/SILENT', \"/dir=`\"$dir`\"\") -RunAs | Out-Null",
             "Remove-Item \"$dir\\setup.exe\""
         ]
     },
     "uninstaller": {
-        "script": "Invoke-ExternalCommand \"${env:ProgramFiles(x86)}\\Intel RealSense SDK 2.0\\unins000.exe\" -ArgumentList @('/SILENT') -RunAs | Out-Null"
+        "script": "Invoke-ExternalCommand \"$dir\\unins000.exe\" -ArgumentList @('/SILENT') -RunAs | Out-Null"
     },
+    "bin": [
+        "tools\\realsense-viewer.exe",
+        "tools\\rs-align.exe",
+        "tools\\rs-align-advanced.exe",
+        "tools\\rs-ar-basic.exe",
+        "tools\\rs-callback.exe",
+        "tools\\rs-capture.exe",
+        "tools\\rs-convert.exe",
+        "tools\\rs-data-collect.exe",
+        "tools\\rs-depth-quality.exe",
+        "tools\\rs-enumerate-devices.exe",
+        "tools\\rs-fw-logger.exe",
+        "tools\\rs-fw-update.exe",
+        "tools\\rs-hello-realsense.exe",
+        "tools\\rs-measure.exe",
+        "tools\\rs-motion.exe",
+        "tools\\rs-multicam.exe",
+        "tools\\rs-pointcloud.exe",
+        "tools\\rs-pose.exe",
+        "tools\\rs-pose-predict.exe",
+        "tools\\rs-post-processing.exe",
+        "tools\\rs-record-playback.exe",
+        "tools\\rs-save-to-disk.exe",
+        "tools\\rs-sensor-control.exe",
+        "tools\\rs-software-device.exe",
+        "tools\\rs-trajectory.exe"
+    ],
     "checkver": {
         "url": "https://github.com/IntelRealSense/librealsense/releases",
         "regex": "Intel\\.RealSense\\.SDK-WIN10-([\\d.]+)\\.exe"
